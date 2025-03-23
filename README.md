@@ -1,4 +1,4 @@
-# Customer Churn Prediction API 
+# Customer Churn Prediction API
 
 This is a Flask API for predicting customer churn using machine learning models. The API takes customer features as input and returns the churn probability and risk level.
 
