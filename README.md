@@ -41,15 +41,44 @@ curl -X POST https://your-app.onrender.com/predict \
 ```
 ## Requirements 
 -pandas
+
 -numpy
+
 -seaborn
+
 -matplotlib
+
 -Python 3.9
+
 -Flask
+
 -XGBoost
+
 -Scikit-learn
--Docker (for containerization)
+
+-Docker (for containerization
+
 -pickle-mixin
+
+## Installation
+1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/Customer_Churn_Prediction.git
+cd Customer_Churn_Prediction
+```
+
+2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the Flask App Locally
+```bash
+python app.py
+```
+
+-The app will be available at http://127.0.0.1:5000.
+
 
 
 
