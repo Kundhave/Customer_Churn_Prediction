@@ -117,17 +117,6 @@ docker run -p 5000:5000 churn-prediction-api
 
 - Set the port to 5000 and deploy.
 
-## Project Structure
-```
-Customer_Churn_Prediction/
-├── app.py                  # Flask API code
-├── best_xgb_model.pkl      # Trained XGBoost model
-├── scaler.pkl              # Scaler for preprocessing
-├── requirements.txt        # Python dependencies
-├── Dockerfile              # Docker configuration
-└── README.md               # Project documentation
-```
-
 ## Contributing
 - Contributions are welcome! If you find any issues or want to enhance the project, feel free to open a pull request.
 
