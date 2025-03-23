@@ -39,3 +39,17 @@ curl -X POST https://your-app.onrender.com/predict \
     "risk_level": "High Risk"
 }
 ```
+## Requirements 
+-pandas
+-numpy
+-seaborn
+-matplotlib
+-Python 3.9
+-Flask
+-XGBoost
+-Scikit-learn
+-Docker (for containerization)
+-pickle-mixin
+
+
+
