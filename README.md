@@ -24,6 +24,8 @@ Send a **comma-separated string** of feature values. For example:
 1,0,0,2,1,1,1,0,1,0,0,1,1,0,1,1,100,100
 }
 
+---
+
 ### Example Request
 
 ```bash
