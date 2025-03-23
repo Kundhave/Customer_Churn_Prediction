@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #6a0dad, #ff69b4);
+            /* Purple to Pink Gradient */
+            color: white;
+            height: 140vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+        }
+
+        h2 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* Centers content */
+            align-items: flex-start; /* Aligns to the top */
+            gap: 20px; /* Adds space between cards */
+            max-width: 1200px; /* Controls overall width */
+            margin: 0 auto; /* Centers the container */
+            flex-wrap: wrap; /* Ensures responsiveness */
+        }
+
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 15px;
+            flex-wrap: nowrap; /* Ensures cards stay in one row */
+        }
+
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            text-align: left;
+            flex: 1; /* Ensures proper width */
+            min-width: 400px; /* Prevents shrinking too much */
+            max-width: 500px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #ffebf7;
+        }
+
+        .card p, .card ul {
+            font-size: 1rem;
+            color: #fff;
+        }
+        
+        form {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            background: #ff1493;
+            /* Deep Pink */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff69b4;
+            /* Lighter Pink */
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Customer Churn Prediction</h2>
+
+    <form id="predict-form">
+                <label>Enter Features (comma-separated):</label>
+                <input type="text" id="features" required>
+                <label>Select Model:</label>
+                <select id="model">
+                    <option value="xgb">XGBoost</option>
+                    <option value="rf">Random Forest</option>
+                </select>
+                <button type="submit">Predict</button>
+    </form>
+            
+    <h3>Result:</h3>
+    <p id="result"></p>
+
+    <div class="container">
+        <!-- Feature Names Card -->
+        <div class="card">
+            <h3>🔢 Feature Variables</h3>
+            <p>Enter the values in the following order, separated by commas:</p>
+            <ul>
+                <li>1. Senior Citizen (1: Yes, 0: No)</li>
+                <li>2. Partner (1: Yes, 0: No)</li>
+                <li>3. Dependents (1: Yes, 0: No)</li>
+                <li>4. Tenure (Number of months with the company)</li>
+                <li>5. Phone Service (1: Yes, 0: No)</li>
+                <li>6. Multiple Lines (1: Yes, 0: No)</li>
+                <li>7. Internet Service (1: DSL, 2: Fiber Optic, 3: None)</li>
+                <li>8. Online Security (1: Yes, 0: No)</li>
+                <li>9. Online Backup (1: Yes, 0: No)</li>
+                <li>10. Device Protection (1: Yes, 0: No)</li>
+                <li>11. Tech Support (1: Yes, 0: No)</li>
+                <li>12. Streaming TV (1: Yes, 0: No)</li>
+                <li>13. Streaming Movies (1: Yes, 0: No)</li>
+                <li>14. Contract (1: Month-to-month, 2: One Year, 3: Two Years)</li>
+                <li>15. Paperless Billing (1: Yes, 0: No)</li>
+                <li>16. Payment Method (1: Electronic Check, 2: Mailed Check, 3: Bank Transfer, 4: Credit Card)</li>
+                <li>17. Monthly Charges (Monthly charge)</li>
+                <li>18. Total Charges (Total charges incurred by the customer)</li>
+            </ul>
+        </div>
+
+
+        <!-- Model Explanation Card -->
+        <div class="card">
+            <h3>Which Model Should You Choose? 🤔</h3>
+            <p><strong>XGBoost</strong>: It works well with complex data and</p>
+            <p>tries to be as accurate as possible.</p>
+            <p><strong>Random Forest</strong>: A more balanced approach, </p> 
+                <p>giving steady predictions. </p>
+            <h3>💡 Key Differences:</h3>
+            <p><strong>XGBoost</strong>: Usually provides well-calibrated probabilities.</p>
+            <p><strong>Random Forest</strong>: gives safer, 50-50 probabilities if uncertain.</p>
+            <p><strong>XGBoost</strong>: picks up on small details more easily.</p>
+            <p>✅ Want precise and detailed predictions? → Choose XGBoost </p>
+            <p>✅ Prefer a safe and steady approach? → Choose Random Forest
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("predict-form").onsubmit = async function (event) {
+            event.preventDefault();
+            let features = document.getElementById("features").value.split(",").map(Number);
+            let model = document.getElementById("model").value;
+
+            let response = await fetch("/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ "features": features, "model": model })
+            });
+
+            let result = await response.json();
+            document.getElementById("result").innerText =
+                result.error ? "Error: " + result.error :
+                    `Churn Risk: ${result.risk_level}, Probability: ${result.churn_probability}`;
+        };
+    </script>
+</body>
+
+</html>
