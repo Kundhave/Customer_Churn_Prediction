@@ -39,6 +39,27 @@ curl -X POST https://your-app.onrender.com/predict \
     "risk_level": "High Risk"
 }
 ```
+
+### Overview:
+
+![image](https://github.com/user-attachments/assets/e6404cbf-c7b0-42cf-a507-4ff8ee39430e)
+
+
+![image](https://github.com/user-attachments/assets/34040d6e-8014-4ce5-b8d6-6620b69cb141)
+
+
+![image](https://github.com/user-attachments/assets/aa7aebf1-e0da-4103-8e93-bc2eeb7b9513)
+
+
+![image](https://github.com/user-attachments/assets/4015891b-0276-489b-a4bc-9706e8290c85)
+
+
+![image](https://github.com/user-attachments/assets/ae58269c-524c-4367-b22a-1fcb2ff345e4)
+
+
+![image](https://github.com/user-attachments/assets/60737f58-6fd9-4059-aac9-ba4be5608a73)
+
+
 ## Requirements 
 - pandas
 
