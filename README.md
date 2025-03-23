@@ -40,25 +40,25 @@ curl -X POST https://your-app.onrender.com/predict \
 }
 ```
 ## Requirements 
--pandas
+- pandas
 
--numpy
+- numpy
 
--seaborn
+- seaborn
 
--matplotlib
+- matplotlib
 
--Python 3.9
+- Python 3.9
 
--Flask
+- Flask
 
--XGBoost
+- XGBoost
 
--Scikit-learn
+- Scikit-learn
 
--Docker (for containerization
+- Docker (for containerization
 
--pickle-mixin
+- pickle-mixin
 
 ## Installation
 1. Clone the Repository
@@ -79,6 +79,37 @@ python app.py
 
 -The app will be available at http://127.0.0.1:5000.
 
+---
+### Deployment
+1. Build the Docker Image
+```bash
+docker build -t churn-prediction-api
+```
+
+2. Run the Docker Container
+```bash
+docker run -p 5000:5000 churn-prediction-api
+```
+
+3. Deploy to Render
+- Push the Docker image to Docker Hub.
+- Connect your Docker Hub repository to Render.
+
+- Set the port to 5000 and deploy.
+
+## Project Structure
+```
+Customer_Churn_Prediction/
+├── app.py                  # Flask API code
+├── best_xgb_model.pkl      # Trained XGBoost model
+├── scaler.pkl              # Scaler for preprocessing
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # Docker configuration
+└── README.md               # Project documentation
+``
+
+## Contributing
+- Contributions are welcome! If you find any issues or want to enhance the project, feel free to open a pull request.
 
 
 
