@@ -31,3 +31,11 @@ curl -X POST https://your-app.onrender.com/predict \
 -H "Content-Type: application/json" \
 -d '{"features": [1, 0, 1, 24, 1, 0, 2, 1, 1, 0, 1, 0, 1, 1, 0, 3, 80, 1500]}'
 ```
+### Example Response
+
+```bash
+{
+    "churn_probability": "92.68%",
+    "risk_level": "High Risk"
+}
+```
