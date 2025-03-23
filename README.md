@@ -77,7 +77,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
--The app will be available at http://127.0.0.1:5000.
+- The app will be available at http://127.0.0.1:5000.
 
 ---
 ### Deployment
@@ -106,7 +106,7 @@ Customer_Churn_Prediction/
 ├── requirements.txt        # Python dependencies
 ├── Dockerfile              # Docker configuration
 └── README.md               # Project documentation
-``
+```
 
 ## Contributing
 - Contributions are welcome! If you find any issues or want to enhance the project, feel free to open a pull request.
