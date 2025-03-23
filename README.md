@@ -21,7 +21,8 @@ This is a Flask API for predicting customer churn using machine learning models.
 ### Request Body
 Send a **comma-separated string** of feature values. For example:
 ```json 
-1,0,0,2,1,1,1,0,1,0,0,1,1,0,1,1,100,100 
+1,0,0,2,1,1,1,0,1,0,0,1,1,0,1,1,100,100
+```
 
 ### Example Request
 
@@ -29,3 +30,4 @@ Send a **comma-separated string** of feature values. For example:
 curl -X POST https://your-app.onrender.com/predict \
 -H "Content-Type: application/json" \
 -d '{"features": [1, 0, 1, 24, 1, 0, 2, 1, 1, 0, 1, 0, 1, 1, 0, 3, 80, 1500]}'
+```
